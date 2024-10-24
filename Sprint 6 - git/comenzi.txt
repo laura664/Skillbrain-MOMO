@@ -4,4 +4,4 @@
 
 "git remote -v" - vedem linkul de conectare la github
 
-" git status" - sa vedem care e statusul nostru 
+" git status" - sa vedem care e statusul nostru "
