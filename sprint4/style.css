@@ -1,0 +1,121 @@
+  .nav{
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.row-centred{
+    align-items: center;
+}
+
+
+
+.content-container{
+    max-width: 1120px;
+    justify-content: center;
+}
+
+.app-logo{
+    height: 40px;
+    margin: 2;
+}
+
+.app-title{
+    font-family: Poppins, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 28px;
+    color: #173a56;
+    margin: 0 10px;
+}
+
+.nav-bar-wrapper{
+    width: 100%;
+    justify-content: space-between;
+}
+
+.nav-links-container > a {
+    display: flex;
+    text-decoration: none;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 28px;
+    color: #22343d;
+    margin: 0 10px;
+}
+
+.primary-button{
+    background: #02897a;
+    border-radius: 4px;
+    height: 43px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    border: none;
+    padding: 0 25px;
+}
+
+.button-outlined{
+    background: #FFFFFF;
+    color: #173a56;
+    border: 1px solid #BCD0E5;
+}
+
+.buttons-nav{
+    margin: 0 12px;
+}
+
+.swtich-theme-button{
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    color: #F3F3F3;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swtich-theme-icon{
+    height: 24px;
+    width: 24px;
+}
+
+.nav-bar-buttons-container{ 
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-header{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 60px;
+    color: #22343d;
+}
+
+.content-left-col, .content-left-col{
+    width: 50%
+}
+
+.subtitle{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 60px;
+    color: #22343d;
+}
