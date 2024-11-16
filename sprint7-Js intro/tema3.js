@@ -13,23 +13,18 @@ function theWeekDay(n) {
             return "Vineri";
         case 6:
             return "Sambata";
-        case 7:
+        case 7, 0:
             return "Duminica";
         default:
-            return "necunoscut";
+            throw "necunoscut";
     }
 
     return text;
 }
 
-let dayNumber;
+let dayNumber = 4;
 let dayString;
 
-nr = 4
-text = theWeekDay(nr);
+let text = theWeekDay(dayNumber);
 
-function theWeekDay(dayNumber) {
-    const dayString = theWeekDay(day)
-}
-
-console.log(theWeekDay(n));
+console.log(theWeekDay(dayNumber));
