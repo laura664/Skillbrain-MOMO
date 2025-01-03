@@ -15,13 +15,21 @@ let carti = [
     {
         titlu: "Hobbitul",
         autor: "J.R.R. Tolkien",
-        este_citita: true
+        este_citita: true,
     },
     {
         titlu: "O fata de moda veche",
         autor: "Louisa May Alcott",
-        este_citita: false
+        este_citita: false,
     }
 ];
 
-console.log(carti);
+// Parcurgem șirul de obiecte și afișăm mesajele
+carti.forEach(carte => {
+    console.log(`"${carte.titlu}" de ${carte.autor}`);
+    if (carte.este_citita) {
+        console.log(`Ai citit deja "${carte.titlu}" de ${carte.autor}`);
+    } else {
+        console.log(`Trebuie să citești "${carte.titlu}" de ${carte.autor}`);
+    }
+});

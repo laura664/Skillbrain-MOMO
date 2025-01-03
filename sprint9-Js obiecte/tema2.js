@@ -5,19 +5,25 @@
 //Output: { a: 1 }
 
 
-function getProperty(obiect, proprietate) {
-    const obiect2 = { ...obiect };
-
-    console.log(proprietate);
-
-    return obiect2;
-
-    let obiect = {
-        a: 1,
-        b: 2
-    }
-
-}
-
 console.log(getProperty(obiect, "b"));
 console.log(obiect);
+
+function getProperty(obiect, proprietate) {
+    // Cream o copie a obiectului pentru a nu modifica obiectul original
+    const obiect2 = { ...obiect };
+
+    // Eliminam proprietatea specificata din copia obiectului
+    delete obiect2[proprietate];
+
+    // Returnam copia modificata
+    return obiect2;
+}
+
+// Exemplu de utilizare
+const obiect = {
+    a: 1,
+    b: 2
+};
+
+console.log(getProperty(obiect, "b"));
+console.log(obiect); 
