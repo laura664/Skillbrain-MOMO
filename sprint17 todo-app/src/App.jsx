@@ -5,36 +5,48 @@ import TodoItem from "./components/todo-item/TodoItem";
 import TextArea from "./components/input/TextArea";
 import Button from "./components/button/Button";
 import "./App.css";
+import { useState } from "react";
 
 const TODOS_MOCK = [
   {
     id: "1",
     title: "Todo 1",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. At id illo repellendus non maiores in pariatur aliquam iure fugit amet!",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. At id illo repellendus non maiores in pariatur aliquam iure fugit amet!",
     completed: false,
   },
   {
     id: "2",
     title: "Todo 2",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit!",
+    description: "Maine merg la munca",
     completed: false,
   },
   {
     id: "3",
     title: "Todo 3",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit!",
+    description: "Ador sa gatesc",
     completed: true,
   },
   {
     id: "4",
     title: "Todo 4",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit!",
-    completed: true,
+    description: "Mai am de invatat la react",
+    completed: false,
+  },
+  {
+    id: "5",
+    title: "Todo 5",
+    description: "Abia astept sa se mai incalzeasca vremea",
+    completed: false,
   },
 ];
 
 function App() {
+  const [todos, setTodos] = useState(TODOS_MOCK);
+  const uncompletedTodos = todos.filter((todo) => !todo.completed);
+  const uncompletedTodosTags = uncompletedTodos.map(todo => <TodoItem key={todo.id} todo={todo} />);
+  const completedTodos = todos.filter((todo) => todo.completed);
+  const completedTodosTags = completedTodos.map(todo => <TodoItem key={todo.id} todo={todo} />);
+
   return (
     <div className="App">
       <div className="app-container">
@@ -44,8 +56,8 @@ function App() {
         <Card>
           <h2>Create Todo</h2>
           <form>
-            <Input onChange={() => {}} placeholder="Title" type="text" />
-            <TextArea onChange={() => {}} placeholder="Description" />
+            <Input onChange={() => { }} placeholder="Title" type="text" />
+            <TextArea onChange={() => { }} placeholder="Description" />
             <Button type="submit">Create</Button>
           </form>
         </Card>
@@ -57,16 +69,16 @@ function App() {
           <h1>My todos</h1>
           <Button onClick={() => console.log("Open Modal")}>Add +</Button>
           <div className="list-container">
-            <TodoItem completed={false} />
-            <TodoItem completed={false} />
+            {uncompletedTodosTags}
+
           </div>
 
           <div className="separator"></div>
 
           <h2>Completed</h2>
           <div className="list-container">
-            <TodoItem completed={true} />
-            <TodoItem completed={true} />
+            {completedTodosTags}
+
           </div>
         </Card>
       </div>
