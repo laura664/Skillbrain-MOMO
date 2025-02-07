@@ -1,0 +1,14 @@
+.app {
+  text-align: center;
+}
+
+p {
+  display: flex;
+  font-family: Sen;
+  font-size: 26px;
+  font-weight: 400;
+  text-align: left;
+  margin-top: 50px;
+  margin-bottom: -40px;
+  margin-left: 70px;
+}
